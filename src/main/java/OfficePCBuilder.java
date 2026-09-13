@@ -26,6 +26,9 @@ public class OfficePCBuilder extends AbstractPCBuilder{
         }
 
         int requiredPsu = cpuTdp + gpuTdp + PSU_WATT_MIN;
+        if (psuWatt == null) {
+            psuWatt = requiredPsu;
+        }
 
         if (psuWatt < requiredPsu) {
             throw new IllegalStateException(getLabel() + " needs a PSU of at least " + requiredPsu + "W");
