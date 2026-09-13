@@ -1,5 +1,5 @@
 public interface PCBuilder {
-    PcBuilder setCpu(String model, int tdpWatts);
+    PCBuilder setCpu(String model, int tdpWatts);
 
     PCBuilder setGpu(String model, int tdpWatts);
 
@@ -11,7 +11,7 @@ public interface PCBuilder {
 
     PCBuilder setCooler(CoolerType cooler);
 
-    PCbuilder setCase(String caseName);
+    PCBuilder setCase(String caseName);
 
     PCBuild build();
 
